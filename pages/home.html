@@ -2,38 +2,105 @@
 <html lang="en-us">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="../styles/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>siPtiP</title>
 </head>
 <body>
+    <nav>
+        <ul class="nav-list">
+            <li class="brand"><a href="#">siPtiP</a></li>
+            <li class="nav-item"><a href="#">About Us</a></li>
+            <li class="nav-item has-dropdown">
+                <a href="#" class="menu-link">Menu</a>
+                <div class="dropdown-menu">
+                    <div class="menu-section">
+                        <h3>Fresh Juices</h3>
+                        <div class="submenu">
+                            <h4>Single Fruit Juices</h4>
+                            <ul>
+                                <li>Mango Juice</li>
+                                <li>Pineapple Juice</li>
+                                <li>Orange Juice</li>
+                            </ul>
+                            <h4>Mixed Fruit Juices</h4>
+                            <ul>
+                                <li>Tropical Mix</li>
+                                <li>Berry Blast</li>
+                                <li>Green Detox</li>
+                            </ul>
+                            <div class="sizes">
+                                <span>Small (250ml)</span>
+                                <span>Regular (400ml)</span>
+                                <span>Large (600ml)</span>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- navbar and header -->
-     <div class="header-nav">
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Orders</a></li>
-            </ul>
-         </nav>
-     </div>
+                    <div class="menu-section">
+                        <h3>Fruit Salads</h3>
+                        <ul>
+                            <li>Classic Fruit Bowl</li>
+                            <li>Tropical Paradise Mix</li>
+                            <li>Berry Medley</li>
+                            <li>Custom Mix</li>
+                        </ul>
+                        <div class="sizes">
+                            <span>Small Tin</span>
+                            <span>Regular Tin</span>
+                            <span>Family Size</span>
+                        </div>
+                    </div>
 
-    <!-- banner card -->
-     <div class="banner-card">
+                    <div class="menu-section">
+                        <h3>Snacks & Bitings</h3>
+                        <div class="submenu">
+                            <h4>Savory Snacks</h4>
+                            <ul>
+                                <li>Samosas</li>
+                                <li>Spring Rolls</li>
+                                <li>Chicken Wings</li>
+                            </ul>
+                            <h4>Sweet Snacks</h4>
+                            <ul>
+                                <li>Fruit Pastries</li>
+                                <li>Cookies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item"><a href="#">Services</a></li>
+            <li class="nav-item"><a href="#">Contact Us</a></li>
+            <li class="nav-item"><a href="#">Orders</a></li>
+            <li class="menu-icon" onclick="toggleSidebar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                    </svg>
+                </a>
+            </li>
+            <li class="close-icon" onclick="toggleSidebar()">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed">
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="banner-card">
         <img src="https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNuYWNrcyUyMGFuZCUyMGRyaW5rc3xlbnwwfHwwfHx8MA%3D%3D" alt="q-trons" width="590" height="590" title="see me!">
-     </div>
+    </div>
 
-    <!-- quick Checkout button -->
-
-    <!-- image carousel -->
-
-    <!-- testimonials -->
-
-    <!-- footer -->
-
+    <script>
+        function toggleSidebar() {
+            const nav = document.querySelector('.nav-list');
+            nav.classList.toggle('show-sidebar');
+            document.body.style.overflow = nav.classList.contains('show-sidebar') ? 'hidden' : 'auto';
+        }
+    </script>
 </body>
 </html>
